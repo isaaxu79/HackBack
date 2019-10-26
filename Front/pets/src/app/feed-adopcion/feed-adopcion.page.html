@@ -10,11 +10,11 @@
             <ion-col>                           
             <ion-card *ngFor="let item of items">
                     <ion-card-header>                        
-                        <ion-card-title>Pepe el perrito</ion-card-title>
+                        <ion-card-title>{{item.titulo}}</ion-card-title>
                     </ion-card-header>
 
                     <ion-card-content>                                          
-                        <ion-img [src]="item.src"></ion-img>                                                  
+                        <ion-img [src]="ruta"></ion-img>                                                  
                         <ion-row>
                         <ion-item>
                           <ion-icon name="star-outline"></ion-icon>                          
@@ -29,7 +29,7 @@
                         </ion-row>
                         
                         <ion-row>
-                          <ion-label>{{item.text}}</ion-label>
+                          <ion-label>{{item.descripcion}}</ion-label>
                         </ion-row>                                           
                     </ion-card-content>
                     </ion-card>                                      
