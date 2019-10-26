@@ -9,7 +9,7 @@ class PublicacionSchema extends Schema {
       table.increments()
       table.string('titulo').notNullable()
       table.string('tipo').notNullable()
-      table.integer('mascota_id').references('id').inTable('mascotas')
+      table.integer('mascota_id').references('id').inTable('mascotas').onDelete('cascade')
       table.timestamps()
     })
   }

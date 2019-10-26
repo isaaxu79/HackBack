@@ -7,8 +7,8 @@ class FavoritoSchema extends Schema {
   up () {
     this.create('favoritos', (table) => {
       table.increments()
-      table.integer('usuario_id').references('id').inTable('empresas')      
-      table.integer('publicacion_id').references('id').inTable('empresas')
+      table.integer('usuario_id').references('id').inTable('users').onDelete('cascade')
+      table.integer('publicacion_id').references('id').inTable('publicacions').onDelete('cascade')
       table.timestamps()
     })
   }
