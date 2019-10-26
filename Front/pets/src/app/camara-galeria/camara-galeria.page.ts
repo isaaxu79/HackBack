@@ -9,6 +9,7 @@ import {File} from '@ionic-native/file/ngx'
 import { ModalController } from '@ionic/angular';
 
 import { Geolocation } from '@ionic-native/geolocation/ngx';
+import { PhotosService } from '../services/photos.service';
 
 @Component({
   selector: 'app-camara-galeria',
@@ -33,7 +34,8 @@ export class CamaraGaleriaPage implements OnInit {
     private transfer: FileTransfer,
     private modalCtrl:ModalController,
     private geolocation:Geolocation,
-    private imagePicker: ImagePicker
+    private imagePicker: ImagePicker,
+    private photo : PhotosService
 ) {
 
    }
@@ -108,10 +110,12 @@ export class CamaraGaleriaPage implements OnInit {
 
 
   preUpload(data){
+    let url = this.photo.saveImages(data);
+    console.log(url);
     //this.api.sendData(data)
     //this.modalCtrl.dismiss();
     //this.navCtrl.navigateRoot('/create');
-    this.upload(data.name,data.fullPath,this.endPoint)
+    //sthis.upload(data.name,data.fullPath,this.endPoint)
   }
 
 
