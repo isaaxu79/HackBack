@@ -35,6 +35,12 @@ class MascotaController {
     }
 
 
+    async getByUser({ params, request, response, view }){
+        let { id } = params
+        let mascotas = await Database.table('mascotas').select('*').where('id_usuario',id)
+
+        return response.status(201).json(mascotas)
+    }
     /**
      * Update class details.
      * PUT or PATCH empresas/:id
