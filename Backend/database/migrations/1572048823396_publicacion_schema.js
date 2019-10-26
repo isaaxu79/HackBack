@@ -11,6 +11,7 @@ class PublicacionSchema extends Schema {
       table.string('tipo').notNullable()
       table.integer('mascota_id').references('id').inTable('mascotas').onDelete('cascade')
       table.integer('id_usuario').references('id').inTable('users').onDelete('cascade')
+      table.boolean('star').defaultTo(false)
       table.timestamps()
     })
   }

@@ -15,12 +15,20 @@ export class FeedAdopcionPage implements OnInit {
 items: any;
   constructor(private api: RestApiService,public toastController: ToastController) { }
 
+
+  estrellaAmarilla="md-star";
+  estrella="star-outline";
+  color = this.estrella;
   ngOnInit() {
     this.getInfo();
   }
   datos = {
-    "tipo":"adopcion"
+    "tipo":"adopcion",
+    "campo":"especie",
+    "valor":"pinguino"
   }
+
+  buttonColor = "FEDC1E";
 
   async getInfo(){
     await this.api.postDataLocal(this.datos, "api/v1/publicacion/filter")
@@ -39,6 +47,14 @@ items: any;
       duration: 2000
     });
     toast.present();
+  }
+
+  favoritos(item){
+    if(item.star = "#FFFFFF"){
+      item.star = "#FEDC1E"
+    }else{
+      item.star = "#FFFFFF";
+    }
   }
 
 }
