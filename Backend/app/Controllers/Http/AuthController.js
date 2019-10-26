@@ -43,7 +43,13 @@ class AuthController {
 
         }
         catch (e) {
-          return response.json({message: 'You first need to register!'})
+          if(e.name == 'UserNotFoundException'){
+            return response.json({message: 'You first need to register!'})
+          }else{
+            return response.json({message: 'invalid password'})
+          }
+          console.log(e)
+          
         }
     }
     

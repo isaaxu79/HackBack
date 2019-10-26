@@ -80,6 +80,18 @@ class PublicacionController {
             msg: 'Eliminado'
         })
     }
+
+    async filter({ params, request, response }) {
+        const campo = request.input("campo")
+        const valor = request.input("valor")
+        const tipo = request.input("tipo")
+        
+        let publicacions = await Database.table('publicacions').innerJoin('mascotas', 'publicacions.mascota_id', 'mascotas.id').where('tipo',tipo).andWhere(campo,valor)
+
+        return response.json({"publicacion":publicacions})
+    }
+
+    
 }
 
 module.exports = PublicacionController
