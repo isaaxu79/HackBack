@@ -11,6 +11,7 @@ class EmpresaSchema extends Schema {
       table.string('longitud').notNullable()
       table.string('direccion').notNullable()
       table.boolean('status').defaultTo(false)
+      table.integer('usuario_id').references('id').inTable('users')
       table.timestamps()
     })
   }

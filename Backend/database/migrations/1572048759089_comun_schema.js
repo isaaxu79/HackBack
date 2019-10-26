@@ -9,6 +9,7 @@ class ComunSchema extends Schema {
       table.increments()
       table.string('apellido').notNullable()
       table.date('fechaNacimiento').notNullable()
+      table.integer('usuario_id').references('id').inTable('users')
       table.timestamps()
     })
   }
