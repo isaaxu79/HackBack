@@ -8,7 +8,7 @@ class MascotaSchema extends Schema {
     this.create('mascotas', (table) => {
       table.increments()
       table.string('nombre').notNullable()
-      table.integer('id_usuario').reference('id').inTable('users')
+      table.integer('id_usuario').references('id').inTable('users')
       table.string('imgPerfil')
       table.string('especie').notNullable()
       table.string('raza')
