@@ -7,6 +7,8 @@ class FotoPublicacionSchema extends Schema {
   up () {
     this.create('foto_publicacions', (table) => {
       table.increments()
+      table.integer('publicacion_id').references('id').inTable('publicacions').onDelete('cascade')
+      table.string('link').notNullable()
       table.timestamps()
     })
   }
