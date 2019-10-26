@@ -20,6 +20,8 @@ import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-nati
 import {File} from '@ionic-native/file/ngx';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 
+import { ImagePicker } from '@ionic-native/image-picker/ngx';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -27,6 +29,7 @@ import { Geolocation } from '@ionic-native/geolocation/ngx';
     AngularFireStorageModule, AngularFirestoreModule],
   providers: [
     Geolocation,
+    ImagePicker,
     StatusBar,
     SplashScreen,
     File,
