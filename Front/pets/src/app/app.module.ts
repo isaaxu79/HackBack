@@ -9,6 +9,11 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
+import { firebaseConfig } from '../environments/firebaseconfig';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+
 import { MediaCapture, CaptureVideoOptions ,MediaFile, CaptureError, CaptureImageOptions } from '@ionic-native/media-capture/ngx';
 import { Media, MediaObject } from '@ionic-native/media/ngx';
 import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer/ngx';
@@ -18,7 +23,8 @@ import { Geolocation } from '@ionic-native/geolocation/ngx';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireStorageModule, AngularFirestoreModule],
   providers: [
     Geolocation,
     StatusBar,
