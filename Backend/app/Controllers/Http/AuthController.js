@@ -45,8 +45,18 @@ class AuthController {
         catch (e) {
           return response.json({message: 'You first need to register!'})
         }
-}
+    }
+    
+    async destroy({ params, request, response }) {
+        let { id } = params
+        let user = await User.findOrFail(id)
 
+        await user.delete()
+
+        return response.status(200).json({
+            msg: 'Eliminado'
+        })
+    }
 
 }
 
