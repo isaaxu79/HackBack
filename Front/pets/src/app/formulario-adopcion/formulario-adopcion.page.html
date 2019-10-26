@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>formularioAdopcion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <form (ngSubmit)="logForm()">
+        <ion-item>
+          <ion-select placeholder="Tipo de vivienda" type="text"  name="title">
+              <ion-select-option value="casa">Casa</ion-select-option>
+              <ion-select-option value="Departamento">Departamento</ion-select-option>
+              <ion-select-option value="Cuarto">Cuarto</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-input placeholder="Medidas" name="description"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-select placeholder="Patio" >
+              <ion-select-option value="Si">Si</ion-select-option>
+              <ion-select-option value="No">No</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-textarea placeholder="Cuente su experiencia con mascotas" name="description"></ion-textarea>
+        </ion-item>
+        <ion-item>
+            <ion-textarea placeholder="Explique porque le gustaria tener una mascota" name="description"></ion-textarea>
+        </ion-item>
+        <button style="width: max-content; height: max-contents;" ion-button type="submit" >Add Todo</button>
+      </form>
+
+</ion-content>
