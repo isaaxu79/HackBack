@@ -9,9 +9,11 @@ const routes: Routes = [
   { path: 'feed-match', loadChildren: './feed-match/feed-match.module#FeedMatchPageModule' },  
   { path: 'vista-individual', loadChildren: './vista-individual/vista-individual.module#VistaIndividualPageModule' },
   { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
-  { path: 'feed-favorito', loadChildren: './feed-favorito/feed-favorito.module#FeedFavoritoPageModule' },  { path: 'formulario-adopcion', loadChildren: './formulario-adopcion/formulario-adopcion.module#FormularioAdopcionPageModule' },
+  { path: 'feed-favorito', loadChildren: './feed-favorito/feed-favorito.module#FeedFavoritoPageModule' },
+  { path: 'formulario-adopcion', loadChildren: './formulario-adopcion/formulario-adopcion.module#FormularioAdopcionPageModule' },
   { path: 'crear-adopcion', loadChildren: './crear-adopcion/crear-adopcion.module#CrearAdopcionPageModule' },
   { path: 'slide-menu', loadChildren: './slide-menu/slide-menu.module#SlideMenuPageModule' },
+  { path: 'registro', loadChildren: './registro/registro.module#RegistroPageModule' },
 
 
 ];

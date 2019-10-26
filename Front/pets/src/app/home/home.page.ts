@@ -11,7 +11,7 @@ export class HomePage {
   constructor(public navCtrl: NavController) {}
 
   click(){
-    this.navCtrl.navigateRoot('/feed-adopcion');
+    this.navCtrl.navigateRoot('/feed-match');
   }
 
 }
