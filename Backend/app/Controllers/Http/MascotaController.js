@@ -34,6 +34,12 @@ class MascotaController {
         return response.status(201).json(mascota)
     }
 
+    async getByName({ params, request, response, view }){
+        let { nombre } = params
+        let mascotas = await Database.table('mascotas').select('*').where('nombre',nombre)
+
+        return response.status(201).json(mascotas)
+    }
 
     async getByUser({ params, request, response, view }){
         let { id } = params

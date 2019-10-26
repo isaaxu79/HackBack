@@ -9,6 +9,12 @@ class PublicacionController {
         return response.status(201).json(publicacions)
     }
 
+    async getByUser({ params, request, response, view }){
+        let { id } = params
+        let publicacions = await Database.table('publicacions').select('*').where('id_usuario',id)
+
+        return response.status(201).json(publicacions)
+    }
 
     /**
      * Create/save a new class.

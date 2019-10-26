@@ -9,6 +9,12 @@ class FotoPublicacionController {
         return response.status(201).json(fotopublicacions)
     }
 
+    async getByUser({ params, request, response, view }){
+        let { id } = params
+        let fotopublicacions = await Database.table('foto_publicacions').select('*').where('publicacion_id',id)
+
+        return response.status(201).json(fotopublicacions)
+    }
 
     /**
      * Create/save a new class.
