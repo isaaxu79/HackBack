@@ -7,7 +7,7 @@ const routes: Routes = [
   { path: 'camara-galeria', loadChildren: './camara-galeria/camara-galeria.module#CamaraGaleriaPageModule' },
   { path: 'feed-adopcion', loadChildren: './feed-adopcion/feed-adopcion.module#FeedAdopcionPageModule' },
   { path: 'feed-match', loadChildren: './feed-match/feed-match.module#FeedMatchPageModule' },  
-
+  { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
 ];
 
 @NgModule({

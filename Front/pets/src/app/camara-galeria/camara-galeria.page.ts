@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ImagePicker } from '@ionic-native/image-picker/ngx';
 import { NavController } from '@ionic/angular';
 
 import { MediaCapture, CaptureVideoOptions ,MediaFile, CaptureError, CaptureImageOptions } from '@ionic-native/media-capture/ngx';
@@ -31,7 +32,8 @@ export class CamaraGaleriaPage implements OnInit {
     private file: File,
     private transfer: FileTransfer,
     private modalCtrl:ModalController,
-    private geolocation:Geolocation
+    private geolocation:Geolocation,
+    private imagePicker: ImagePicker
 ) {
 
    }
@@ -49,6 +51,25 @@ export class CamaraGaleriaPage implements OnInit {
     console.log("lat: " + this.lat + " lng: " + this.lng);
   }
 
+
+  async openGalery(){
+    handler: () => {
+      let options = { maximumImagesCount: 1, 
+        quality:100
+      }
+      this.imagePicker.getPictures(options).then((results) => {
+          console.log(results[0])
+          let arr = results[0].split('/')
+          let directory = arr[0]
+          for(let m=1;m<arr.length-1;m++)
+            directory = directory + "/"+ arr[m] 
+          console.log(directory)
+      }, (err) => { 
+        console.log("error en takepickture")
+        console.log(err)});
+
+    }
+  }
   upload(fileName,filePath,endPoint) {
 
     /*const fileTransfer: FileTransferObject = this.transfer.create();
