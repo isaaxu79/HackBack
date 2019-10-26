@@ -9,6 +9,12 @@ class ComunController {
         return response.status(201).json(comuns)
       }
     
+      async getByUser({ params, request, response, view }){
+        let { id } = params
+        let comun = await Database.table('comuns').select('*').where('usuario_id',id)
+
+        return response.status(201).json(comun)
+    }
     
       /**
        * Create/save a new class.

@@ -9,6 +9,12 @@ class FavoritoController {
         return response.status(201).json(favoritos)
     }
 
+    async getByUser({ params, request, response, view }){
+        let { id } = params
+        let favoritos = await Database.table('favoritos').select('*').where('usuario_id',id)
+
+        return response.status(201).json(favoritos)
+    }
 
     /**
      * Create/save a new class.

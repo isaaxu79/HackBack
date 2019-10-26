@@ -10,6 +10,12 @@ class EmpresaController {
         return response.status(201).json(empresas)
       }
     
+      async getByUser({ params, request, response, view }){
+        let { id } = params
+        let empresa = await Database.table('empresas').select('*').where('usuario_id',id)
+
+        return response.status(201).json(empresa)
+    }
     
       /**
        * Create/save a new class.

@@ -9,6 +9,12 @@ class FotoEmpresaController {
         return response.status(201).json(fotoempresas)
     }
 
+    async getByUser({ params, request, response, view }){
+        let { id } = params
+        let fotoempresa = await Database.table('foto_empresas').select('*').where('empresa_id',id)
+
+        return response.status(201).json(fotoempresa)
+    }
 
     /**
      * Create/save a new class.
