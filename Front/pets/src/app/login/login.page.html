@@ -6,11 +6,7 @@
         </ion-col>
         <ion-col col-4></ion-col>
       </ion-row>
-
-
-
-
-        
+  
 
       <ion-row>
           <ion-col col-4></ion-col>
@@ -18,14 +14,14 @@
               <h2 style="color: aliceblue;">
                  Usuario o correo
               </h2>
-                <input type="text" placeholder="Ingrese su usuario o correo ">
+                <input type="text" [(ngModel)]="email" placeholder="Ingrese su usuario o correo ">
 
 
 
                 <h2 style="color: aliceblue;">
                     Contraseña
                  </h2>
-                   <input type="password" placeholder="Ingrese su contraseña">
+                   <input type="password" [(ngModel)]="password" placeholder="Ingrese su contraseña">
           </ion-col>
           <ion-col col-4></ion-col>
         </ion-row>
@@ -35,7 +31,7 @@
         <ion-row>
             <ion-col col-4></ion-col>
             <ion-col col-4>
-                <ion-button (click)="onClick()">
+                <ion-button (click)="login()">
                  Inicia sesión
                 </ion-button> 
             </ion-col>
