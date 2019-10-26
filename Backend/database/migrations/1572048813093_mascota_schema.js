@@ -7,6 +7,14 @@ class MascotaSchema extends Schema {
   up () {
     this.create('mascotas', (table) => {
       table.increments()
+      table.string('nombre').notNullable()
+      table.integer('id_usuario').reference('id').inTable('users')
+      table.string('imgPerfil')
+      table.string('especie').notNullable()
+      table.string('raza')
+      table.string('edad').notNullable()
+      table.string('descripcion')
+      table.string('sexo').notNullable()
       table.timestamps()
     })
   }

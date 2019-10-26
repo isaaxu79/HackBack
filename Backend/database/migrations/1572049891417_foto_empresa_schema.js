@@ -7,6 +7,8 @@ class FotoEmpresaSchema extends Schema {
   up () {
     this.create('foto_empresas', (table) => {
       table.increments()
+      table.integer('empresa_id').references('id').inTable('empresas')
+      table.string('link').notNullable()
       table.timestamps()
     })
   }

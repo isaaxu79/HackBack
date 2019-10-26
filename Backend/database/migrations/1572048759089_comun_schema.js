@@ -7,6 +7,8 @@ class ComunSchema extends Schema {
   up () {
     this.create('comuns', (table) => {
       table.increments()
+      table.string('apellido').notNullable()
+      table.date('fechaNacimiento').notNullable()
       table.timestamps()
     })
   }
