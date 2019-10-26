@@ -22,11 +22,11 @@ class AuthController {
         user.nombre = nombre
         user.imgPerfil = imgPerfil
         user.estado = estado
-        uuser.ciudad = ciudad
+        user.ciudad = ciudad
         user.pais = pais
 
 
-        user = await user.save()
+        await user.save()
         let accessToken = await auth.generate(user)
         return response.json({"user": user, "access_token": accessToken})
     }
