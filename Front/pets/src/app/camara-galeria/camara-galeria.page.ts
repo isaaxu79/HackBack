@@ -21,7 +21,7 @@ export class CamaraGaleriaPage implements OnInit {
   public video: string = null;
   public typeOfFile: number;
   public videoType: string = null;
-  endPoint = "";
+  endPoint = "192.168.43.63:3333/api/v1/fotos_empresa";
   lat =0;
   lng = 0;
 
@@ -46,12 +46,12 @@ export class CamaraGaleriaPage implements OnInit {
     this.geolocation.getCurrentPosition().then((resp) => {
       this.lat = resp.coords.latitude, this.lng = resp.coords.longitude
     });
-    console.log("lat: " + this.lat + " lng: " + this.lng);
+    
   }
 
   upload(fileName,filePath,endPoint) {
 
-    /*const fileTransfer: FileTransferObject = this.transfer.create();
+    const fileTransfer: FileTransferObject = this.transfer.create();
     let options: FileUploadOptions = {
        fileKey: 'file',
        fileName: fileName,
@@ -62,8 +62,7 @@ export class CamaraGaleriaPage implements OnInit {
        console.log(data)
      }, (err) => {
        console.log(err)
-     })*/
-     console.log(filePath);
+     })
   }
 
   openCamera(){
