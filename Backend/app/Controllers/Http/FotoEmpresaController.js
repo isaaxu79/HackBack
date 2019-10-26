@@ -1,10 +1,11 @@
 'use strict'
 const FotoEmpresa = use('App/Models/FotoEmpresa')
 const Database = use('Database')
+const Firebase = use('Perafan/Firebase');
+const FirebaseAdmin = use('Perafan/FirebaseAdmin');
 
 class FotoEmpresaController {
     async index({ request, response, view }) {
-
         let fotoempresas = await Database.table('foto_empresas')
         return response.status(201).json(fotoempresas)
     }
@@ -22,6 +23,7 @@ class FotoEmpresaController {
      */
     async store({ request, response }) {
         let fotoempresa_data = request.all()
+        
 
         let fotoempresa = await FotoEmpresa.create(fotoempresa_data)
 
