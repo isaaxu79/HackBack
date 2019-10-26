@@ -22,17 +22,10 @@
     "@angular/platform-browser-dynamic": "~8.1.2",
     "@angular/router": "~8.1.2",
     "@ionic-native/core": "^5.0.0",
-<<<<<<< HEAD
-    "@ionic-native/image-picker": "^5.15.1",
-    "@ionic-native/splash-screen": "^5.0.0",
-    "@ionic-native/status-bar": "^5.0.0",
-    "@ionic/angular": "^4.7.1",
-    "cordova-android": "8.1.0",
-    "cordova-plugin-telerik-imagepicker": "2.3.3",
-=======
     "@ionic-native/file": "^5.15.1",
     "@ionic-native/file-transfer": "^5.15.1",
     "@ionic-native/geolocation": "^5.15.1",
+    "@ionic-native/image-picker": "^5.15.1",
     "@ionic-native/media": "^5.15.1",
     "@ionic-native/media-capture": "^5.15.1",
     "@ionic-native/splash-screen": "^5.0.0",
@@ -45,8 +38,8 @@
     "cordova-plugin-ionic-webview": "^4.1.2",
     "cordova-plugin-media": "^5.0.3",
     "cordova-plugin-media-capture": "^3.0.3",
->>>>>>> 349d658472b324744a5831dbcf3f2fa581208ea0
     "core-js": "^2.5.4",
+    "firebase": "^6.3.5",
     "rxjs": "~6.5.1",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"
@@ -67,10 +60,7 @@
     "codelyzer": "^5.0.0",
     "cordova-plugin-device": "^2.0.2",
     "cordova-plugin-ionic-keyboard": "^2.2.0",
-<<<<<<< HEAD
     "cordova-plugin-ionic-webview": "^4.1.2",
-=======
->>>>>>> 349d658472b324744a5831dbcf3f2fa581208ea0
     "cordova-plugin-splashscreen": "^5.0.2",
     "cordova-plugin-statusbar": "^2.4.2",
     "cordova-plugin-whitelist": "^1.3.3",
@@ -89,37 +79,22 @@
   "description": "An Ionic project",
   "cordova": {
     "plugins": {
-<<<<<<< HEAD
-      "cordova-plugin-telerik-imagepicker": {},
-=======
       "cordova-plugin-media-capture": {},
       "cordova-plugin-media": {},
       "cordova-plugin-file-transfer": {},
       "cordova-plugin-file": {},
->>>>>>> 349d658472b324744a5831dbcf3f2fa581208ea0
       "cordova-plugin-whitelist": {},
       "cordova-plugin-statusbar": {},
       "cordova-plugin-device": {},
       "cordova-plugin-splashscreen": {},
-<<<<<<< HEAD
-      "cordova-plugin-ionic-webview": {
-        "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+"
-      },
-      "cordova-plugin-ionic-keyboard": {}
-=======
       "cordova-plugin-ionic-keyboard": {},
       "cordova-plugin-ionic-webview": {
         "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+"
       },
       "cordova-plugin-geolocation": {}
->>>>>>> 349d658472b324744a5831dbcf3f2fa581208ea0
     },
     "platforms": [
       "android"
     ]
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 349d658472b324744a5831dbcf3f2fa581208ea0

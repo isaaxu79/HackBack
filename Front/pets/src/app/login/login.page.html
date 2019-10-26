@@ -1,0 +1,47 @@
+<ion-content class="fondologin">
+    <ion-row>
+        <ion-col col-4></ion-col>
+        <ion-col col-4>
+            <ion-img width="80" height="80" src="assets/s-l300.png"></ion-img>>
+        </ion-col>
+        <ion-col col-4></ion-col>
+      </ion-row>
+  
+
+      <ion-row>
+          <ion-col col-4></ion-col>
+          <ion-col col-4>
+              <h2 style="color: aliceblue;">
+                 Usuario o correo
+              </h2>
+                <input type="text" [(ngModel)]="email" placeholder="Ingrese su usuario o correo ">
+
+
+
+                <h2 style="color: aliceblue;">
+                    Contraseña
+                 </h2>
+                   <input type="password" [(ngModel)]="password" placeholder="Ingrese su contraseña">
+          </ion-col>
+          <ion-col col-4></ion-col>
+        </ion-row>
+
+
+        <br>
+        <ion-row>
+            <ion-col col-4></ion-col>
+            <ion-col col-4>
+                <ion-button (click)="login()">
+                 Inicia sesión
+                </ion-button> 
+            </ion-col>
+            <ion-col col-4></ion-col>
+          </ion-row>
+
+      
+
+</ion-content>
+
+
+
+

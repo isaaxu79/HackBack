@@ -9,6 +9,7 @@ import {File} from '@ionic-native/file/ngx'
 import { ModalController } from '@ionic/angular';
 
 import { Geolocation } from '@ionic-native/geolocation/ngx';
+import { PhotosService } from '../services/photos.service';
 
 @Component({
   selector: 'app-camara-galeria',
@@ -22,7 +23,7 @@ export class CamaraGaleriaPage implements OnInit {
   public video: string = null;
   public typeOfFile: number;
   public videoType: string = null;
-  endPoint = "";
+  endPoint = "192.168.43.63:3333/api/v1/fotos_empresa";
   lat =0;
   lng = 0;
 
@@ -33,7 +34,8 @@ export class CamaraGaleriaPage implements OnInit {
     private transfer: FileTransfer,
     private modalCtrl:ModalController,
     private geolocation:Geolocation,
-    private imagePicker: ImagePicker
+    private imagePicker: ImagePicker,
+    private photo : PhotosService
 ) {
 
    }
@@ -48,7 +50,7 @@ export class CamaraGaleriaPage implements OnInit {
     this.geolocation.getCurrentPosition().then((resp) => {
       this.lat = resp.coords.latitude, this.lng = resp.coords.longitude
     });
-    console.log("lat: " + this.lat + " lng: " + this.lng);
+    
   }
 
 
@@ -72,7 +74,7 @@ export class CamaraGaleriaPage implements OnInit {
   }
   upload(fileName,filePath,endPoint) {
 
-    /*const fileTransfer: FileTransferObject = this.transfer.create();
+    const fileTransfer: FileTransferObject = this.transfer.create();
     let options: FileUploadOptions = {
        fileKey: 'file',
        fileName: fileName,
@@ -83,8 +85,7 @@ export class CamaraGaleriaPage implements OnInit {
        console.log(data)
      }, (err) => {
        console.log(err)
-     })*/
-     console.log(filePath);
+     })
   }
 
   openCamera(){
@@ -109,10 +110,12 @@ export class CamaraGaleriaPage implements OnInit {
 
 
   preUpload(data){
+    let url = this.photo.saveImages(data);
+    console.log(url);
     //this.api.sendData(data)
     //this.modalCtrl.dismiss();
     //this.navCtrl.navigateRoot('/create');
-    this.upload(data.name,data.fullPath,this.endPoint)
+    //sthis.upload(data.name,data.fullPath,this.endPoint)
   }
 
 
