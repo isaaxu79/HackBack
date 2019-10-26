@@ -19,6 +19,7 @@ import { Media, MediaObject } from '@ionic-native/media/ngx';
 import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer/ngx';
 import {File} from '@ionic-native/file/ngx';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { ImagePicker } from '@ionic-native/image-picker/ngx';
 
@@ -26,7 +27,7 @@ import { ImagePicker } from '@ionic-native/image-picker/ngx';
   declarations: [AppComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireStorageModule, AngularFirestoreModule],
+    AngularFireStorageModule, AngularFirestoreModule, HttpClientModule],
   providers: [
     Geolocation,
     ImagePicker,
