@@ -24,7 +24,7 @@ Route.group(() => {
   Route.get('mascotas/pets','MascotaController.getByName')
   Route.get('comun/user/:id','ComunController.getByUser')
   Route.get('empresa/user/:id','EmpresaController.getByUser')
-  Route.get('favorito/user/:id','FavoritoController.getByUser')
+  Route.get('favo rito/user/:id','FavoritoController.getByUser')
   Route.get('foto_empresa/user/:id','FotoEmpresaController.getByUser')
   Route.get('foto_empresa/user/:id','FotoPublicacionController.getByUser')
   Route.get('publicacion/user/:id','PublicacionController.getByUser')
