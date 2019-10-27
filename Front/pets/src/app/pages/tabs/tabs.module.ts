@@ -13,14 +13,16 @@ const routes: Routes = [
     component: TabsPage,
     children:[
         { path: 'home', loadChildren: () => import('../../home/home.module').then( m => m.HomePageModule)},
-        { path: 'tab1', loadChildren: '../tab1/tab1.module#Tab1PageModule' },
-        { path: 'tab2', loadChildren: '../tab2/tab2.module#Tab2PageModule' },
+        { path: 'feed-match', loadChildren: '../../feed-match/feed-match.module#FeedMatchPageModule' },
+        { path: 'servicios', loadChildren: () => import('../../home/home.module').then( m => m.HomePageModule) },
+        { path: 'perfil', loadChildren: () => import('../../home/home.module').then( m => m.HomePageModule) },
+        { path: 'feed-adopcion', loadChildren: '../../feed-adopcion/feed-adopcion.module#FeedAdopcionPageModule' },
     ]
   },
   {
-    path:'',
-    redirectTo:'/tabs/home',
-    pathMatch:'full'
+    path: '',
+    redirectTo: '/tabs/home',
+    pathMatch: 'full'
   }
 ];
 
