@@ -9,7 +9,7 @@ import { ToastController } from '@ionic/angular';
 export class FeedFavoritoPage implements OnInit {
 
   items: any;
-  constructor(private api: RestApiService,public toastController: ToastController) { }
+  constructor(private api: RestApiService,public toastController: ToastController) {     this.getInfo();}
 
 
   estrellaAmarilla="md-star";
@@ -18,16 +18,16 @@ export class FeedFavoritoPage implements OnInit {
   ngOnInit() {
     this.getInfo();
   }
+
   datos = {
     "tipo":"favoritos",
-    "campo":"especie",
-    "valor":"Lomo"
+    "campo":1,
+    "valor":1
   }
-
   buttonColor = "FEDC1E";
 
   async getInfo(){
-    await this.api.postDataLocal(this.datos, "api/v1/publicacion/filter")
+    await this.api.getDataLocal("api/v1/favorito/user/" + window.localStorage.getItem("idUser"))
     .subscribe(res => {
         this.items=res.publicacion;
         this.presentToast(res.message);
@@ -45,12 +45,19 @@ export class FeedFavoritoPage implements OnInit {
     toast.present();
   }
 
-  favoritos(item){
-    if(item.star = "#FFFFFF"){
-      item.star = "#FEDC1E"
-    }else{
-      item.star = "#FFFFFF";
+  async favoritos(item){
+    let datos2={
+      "id_usuario":window.localStorage.getItem("idUser"),
+      "id_publicacion":item.id_publicacion
     }
+    await this.api.postDataLocal(datos2, "favorito/" + item.id)
+    .subscribe(res => {
+        this.items=res.publicacion;
+        this.presentToast(res.message);
+    },(err) => {
+      console.log(err);
+      this.presentToast("Ocurrió un error interno");
+    });
   }
 
 

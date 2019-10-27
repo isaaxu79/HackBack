@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-slide-menu',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SlideMenuPage implements OnInit {
 
-  constructor() { }
+  constructor(public navCtrl: NavController,) { }
 
   ngOnInit() {
+  }
+
+  goToAdoptar(){
+    this.navCtrl.pop();
+    this.navCtrl.navigateRoot('/feed-adopcion');
+  }
+  goToMatch(){
+    this.navCtrl.pop();
+    this.navCtrl.navigateRoot('/feed-match');
+  }
+  goToServices(){
+    this.navCtrl.pop();
+    this.navCtrl.navigateRoot('/feed-favorito');
   }
 
 }

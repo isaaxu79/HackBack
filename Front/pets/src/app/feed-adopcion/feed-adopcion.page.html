@@ -18,11 +18,13 @@
                           <ion-row>
                           <ion-item>
                             <ion-button (click)='favoritos(item)'>
-                              <ion-icon  [ngStyle]="{'color': item.star}" name="md-star"></ion-icon>      
+                              <!--<ion-icon  [ngStyle]="{'color': item.star}" name="md-star"></ion-icon>-->
                             </ion-button>                    
                           </ion-item>
                           <ion-item>
+                            <ion-button (click)="chat(item.titulo)">
                             <ion-icon name="contact"></ion-icon>                        
+                            </ion-button>
                           </ion-item>
   
                           <ion-item>
@@ -31,7 +33,7 @@
                           </ion-row>
                           
                           <ion-row>
-                            <ion-label>{{item.descripcion}}</ion-label>
+                            <!--<ion-label>{{item.descripcion}}</ion-label>-->
                           </ion-row>                                           
                       </ion-card-content>
                       </ion-card>                                      

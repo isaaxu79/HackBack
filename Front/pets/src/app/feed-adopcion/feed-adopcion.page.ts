@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { RestApiService } from '../rest-api.service';
 import { ToastController } from '@ionic/angular';
+import { ModalController } from '@ionic/angular';
+import { ModalPagePage } from '../modal-page/modal-page.page';
+
 
 
 @Component({
@@ -13,8 +16,14 @@ export class FeedAdopcionPage implements OnInit {
   ruta = "https://estaticos.muyinteresante.es/media/cache/760x570_thumb/uploads/images/article/5c3871215bafe83b078adbe3/perro.jpg"
 
 items: any;
-  constructor(private api: RestApiService,public toastController: ToastController) { }
+  constructor(private api: RestApiService,public toastController: ToastController, private modalController:ModalController) { }
 
+  async chat(titulo) {
+    const modal = await this.modalController.create({
+      component: ModalPagePage
+    });
+    return await modal.present();
+  }
 
   estrellaAmarilla="md-star";
   estrella="star-outline";
@@ -24,8 +33,8 @@ items: any;
   }
   datos = {
     "tipo":"adopcion",
-    "campo":"especie",
-    "valor":"pinguino"
+    "campo":1,
+    "valor":1
   }
 
   buttonColor = "FEDC1E";
@@ -49,11 +58,26 @@ items: any;
     toast.present();
   }
 
-  favoritos(item){
+  async favoritos(item){
+    let datos2={
+      "id_usuario":window.localStorage.getItem("idUser"),
+      "id_publicacion":item.id_publicacion
+    }
+
     if(item.star = "#FFFFFF"){
       item.star = "#FEDC1E"
+      await this.api.postDataLocal(datos2, "api/v1/favorito")
+    .subscribe(res => {
+        this.items=res.publicacion;
+        this.presentToast(res.message);
+    },(err) => {
+      console.log(err);
+      this.presentToast("Ocurrió un error interno");
+    });
     }else{
       item.star = "#FFFFFF";
+
+
     }
   }
 
