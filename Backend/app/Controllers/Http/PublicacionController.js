@@ -4,7 +4,7 @@ const Database = use('Database')
 
 class PublicacionController {
     async index({ request, response, view }) {
-
+        
         let publicacions = await Database.table('publicacions')
         return response.status(201).json(publicacions)
     }
