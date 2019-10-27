@@ -9,7 +9,7 @@
             <ion-col>
                 <ion-card *ngFor="let item of items">
                     <ion-card-header>
-                        <ion-img src="item.id"></ion-img>
+                        <ion-img [src]="item.imagen"></ion-img>
                         <ion-card-title>{{item.titulo}}</ion-card-title>
                     </ion-card-header>
                     <h5><ion-icon name="phone-portrait" ></ion-icon>Telefono: {{item.telefono}} </h5>
