@@ -13,7 +13,9 @@ const httpOptions = {
     }
   )
 }
-const apiUrlLocal = "http://192.168.43.63:3333/";
+//const apiUrlLocal = "http://192.168.43.63:3333/";
+const apiUrlLocal = "https://hack-2312.appspot.com/"
+
 @Injectable({
   providedIn: 'root'
 })
