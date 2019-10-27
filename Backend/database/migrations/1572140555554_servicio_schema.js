@@ -8,9 +8,11 @@ class ServicioSchema extends Schema {
     this.create('servicios', (table) => {
       table.increments()
       table.string('titulo').notNullable()            
-      table.string('descripcion').notNullable()   
+      table.string('descripcion').notNullable()               
+      table.string('telefono').notNullable()   
+      table.string('ubicacion').notNullable()         
       table.integer('id_usuario').references('id').inTable('users').onDelete('cascade')
-      table.integer('stars')
+      table.integer('calificacion')
       table.timestamps()
     })
   }
