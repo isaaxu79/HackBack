@@ -5,12 +5,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { VistaIndividualPage } from './vista-individual.page';
+import { EditAdoptionPage } from './edit-adoption.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: VistaIndividualPage
+    component: EditAdoptionPage
   }
 ];
 
@@ -21,6 +21,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [VistaIndividualPage]
+  declarations: [EditAdoptionPage]
 })
-export class VistaIndividualPageModule {}
+export class EditAdoptionPageModule {}

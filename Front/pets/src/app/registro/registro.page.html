@@ -1,19 +1,75 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Registro</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content style="align-items: center;">
-  <ion-input placeholder="Nombre de usuario"></ion-input>
-  <ion-input placeholder="Nombre"></ion-input>
-  <ion-input placeholder="Apellidos"></ion-input>
-  <ion-input placeholder="Fecha de nacimiento"></ion-input>
-  <ion-input placeholder="Municipio"></ion-input>
-  <ion-input placeholder="Estado"></ion-input>
-  <ion-input placeholder="Pais"></ion-input>
-  <ion-input placeholder="correo"></ion-input>
-  <ion-input placeholder="password"></ion-input>
-  <ion-button color="dark">Subir foto</ion-button>
-  <ion-button color="primary">Guardar</ion-button>
+<ion-content >
+  <ion-row padding>
+    <ion-col size="2">
+      <ion-button fill="clear"><ion-icon color="light" name="arrow-round-back"></ion-icon></ion-button>
+    </ion-col>
+    <ion-col size="10">
+        <ion-label position="fixed" color="light"> Crea una cuenta</ion-label>
+    </ion-col>
+  </ion-row>
+  <ion-grid padding>
+    <ion-row>
+        <ion-col padding></ion-col>
+        <ion-col align-self-center>
+            <ion-img src="../../assets/editar.png"></ion-img>
+        </ion-col>
+        <ion-col padding></ion-col>
+        <ion-col size="12" align-self-center>
+          <ion-item lines="none" style="background: transparent;">
+              <ion-label position="floating">Username</ion-label>
+              <ion-input></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12" align-self-center>
+          <ion-item lines="none" style="background: transparent;">
+              <ion-label position="floating">Correo</ion-label>
+              <ion-input></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12" align-self-center>
+          <ion-item lines="none" style="background: transparent;">
+              <ion-label position="floating">Password</ion-label>
+              <ion-input></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12" align-self-center>
+          <ion-item lines="none" style="background: transparent;">
+              <ion-label position="floating">Nombre</ion-label>
+              <ion-input></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12" align-self-center>
+          <ion-item lines="none" style="background: transparent;">
+              <ion-label position="floating">Apellido</ion-label>
+              <ion-input></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12" align-self-center>
+          <ion-item lines="none" style="background: transparent;">
+              <ion-label position="floating">Fecha nacimiento</ion-label>
+              <ion-datetime value="1990-02-19" placeholder="Selecciona Fecha"></ion-datetime>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12" align-self-center>
+            <ion-item lines="none" style="background: transparent;">
+                <ion-label position="floating">Municipio</ion-label>
+                <ion-input></ion-input>
+            </ion-item>
+        </ion-col>
+        <ion-col size="12" align-self-center>
+            <ion-item lines="none" style="background: transparent;">
+                <ion-label position="floating">Estado</ion-label>
+                <ion-input></ion-input>
+            </ion-item>
+        </ion-col>
+        <ion-col size="12" align-self-center>
+          <ion-item lines="none" style="background: transparent;">
+              <ion-label position="floating">Pais</ion-label>
+              <ion-input></ion-input>
+          </ion-item>
+        </ion-col>
+  </ion-row>
+  
+  <ion-button shape="round" expand="block" (click)="signUp()">Guardar</ion-button>>
+  </ion-grid>
 </ion-content>

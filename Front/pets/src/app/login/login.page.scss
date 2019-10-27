@@ -1,8 +1,17 @@
+ion-img{
+    max-width: 200px;
+    max-height: 200px;
+}
+
+ion-icon{
+    max-width: 20px;
+    max-height: 20px;
+}
 ion-content{
     --background: url(../../assets/images.jpg);
 }
 
-ion-img{
-    max-width: 200px;
-    max-height: 200px;
+
+ion-item{
+    border-radius: 30px;;
 }
