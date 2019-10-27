@@ -11,7 +11,7 @@ class ComunController {
     
       async getByUser({ params, request, response, view }){
         let { id } = params
-        let comun = await Database.table('comuns').select('*').where('usuario_id',id)
+        let comun = await Database.table('comuns').select('*').where('usuario_id',id).innerJoin('users','users.id','comuns.usuario_id')
 
         return response.status(201).json(comun)
     }
