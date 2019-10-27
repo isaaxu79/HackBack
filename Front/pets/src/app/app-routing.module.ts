@@ -19,8 +19,7 @@ const routes: Routes = [
   // { path: 'tab2', loadChildren: './pages/tab2/tab2.module#Tab2PageModule' },
   
   { path: 'modal-page', loadChildren: './modal-page/modal-page.module#ModalPagePageModule' },
-
-
+  { path: 'profile', loadChildren: './profile/profile.module#ProfilePageModule' },
 ];
 
 
