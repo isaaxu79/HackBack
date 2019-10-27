@@ -1,5 +1,7 @@
+import { MenuComponent } from './../menu/menu.component';
 import { Component } from '@angular/core';
 import { NavController } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-home',

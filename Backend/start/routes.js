@@ -19,6 +19,7 @@ Route.group(() => {
   Route.resource('foto_empresa', 'FotoEmpresaController').apiOnly()
   Route.resource('foto_publicacion', 'FotoPublicacionController').apiOnly()
   Route.resource('favoritos', 'FavoritoController').apiOnly()
+  Route.resource('servicio', 'ServicioController').apiOnly()
 
   Route.get('mascotas/mypets/:id','MascotaController.getByUser')
   Route.get('mascotas/pets','MascotaController.getByName')

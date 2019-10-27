@@ -1,3 +1,5 @@
+import { MenuComponent } from './menu/menu.component';
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
@@ -24,7 +26,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ImagePicker } from '@ionic-native/image-picker/ngx';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent,MenuComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, AngularFireModule.initializeApp(firebaseConfig),
     AngularFireStorageModule, AngularFirestoreModule, HttpClientModule],

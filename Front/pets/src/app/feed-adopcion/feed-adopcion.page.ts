@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { RestApiService } from '../rest-api.service';
 import { ToastController } from '@ionic/angular';
+import { ModalController } from '@ionic/angular';
+import { ModalPagePage } from '../modal-page/modal-page.page';
+
 
 
 @Component({
@@ -13,8 +16,14 @@ export class FeedAdopcionPage implements OnInit {
   ruta = "https://estaticos.muyinteresante.es/media/cache/760x570_thumb/uploads/images/article/5c3871215bafe83b078adbe3/perro.jpg"
 
 items: any;
-  constructor(private api: RestApiService,public toastController: ToastController) { }
+  constructor(private api: RestApiService,public toastController: ToastController, private modalController:ModalController) { }
 
+  async chat(titulo) {
+    const modal = await this.modalController.create({
+      component: ModalPagePage
+    });
+    return await modal.present();
+  }
 
   estrellaAmarilla="md-star";
   estrella="star-outline";
