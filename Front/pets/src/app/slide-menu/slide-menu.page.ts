@@ -17,7 +17,7 @@ export class SlideMenuPage implements OnInit {
 
   goToHome(){
     this.navCtrl.pop();
-    this.navCtrl.navigateRoot('/tabs/home');
+    this.navCtrl.navigateRoot('/tabs/feed-adopcion');
   }
 
 }
