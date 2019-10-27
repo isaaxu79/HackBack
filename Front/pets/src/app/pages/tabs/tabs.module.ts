@@ -14,7 +14,7 @@ const routes: Routes = [
     children:[
         { path: 'home', loadChildren: () => import('../../home/home.module').then( m => m.HomePageModule)},
         { path: 'feed-match', loadChildren: '../../feed-match/feed-match.module#FeedMatchPageModule' },
-        { path: 'servicios', loadChildren: () => import('../../home/home.module').then( m => m.HomePageModule) },
+        { path: 'servicios-list', loadChildren: '../../servicios-list/servicios-list.module#ServiciosListPageModule'},
         { path: 'perfil', loadChildren: () => import('../../home/home.module').then( m => m.HomePageModule) },
         { path: 'feed-adopcion', loadChildren: '../../feed-adopcion/feed-adopcion.module#FeedAdopcionPageModule' },
     ]

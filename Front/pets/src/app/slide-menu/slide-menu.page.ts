@@ -15,17 +15,9 @@ export class SlideMenuPage implements OnInit {
   ngOnInit() {
   }
 
-  goToAdoptar(){
+  goToHome(){
     this.navCtrl.pop();
-    this.navCtrl.navigateRoot('/tabs/feed-adopcion');
-  }
-  goToMatch(){
-    this.navCtrl.pop();
-    this.navCtrl.navigateRoot('/tabs/feed-match');
-  }
-  goToServices(){
-    this.navCtrl.pop();
-    this.navCtrl.navigateRoot('/feed-favorito');
+    this.navCtrl.navigateRoot('/tabs/home');
   }
 
 }

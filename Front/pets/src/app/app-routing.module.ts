@@ -15,8 +15,7 @@ const routes: Routes = [
   { path: 'tabs', loadChildren: './pages/tabs/tabs.module#TabsPageModule' },
   // { path: 'tab1', loadChildren: './pages/tab1/tab1.module#Tab1PageModule' },
   // { path: 'tab2', loadChildren: './pages/tab2/tab2.module#Tab2PageModule' },
-  
-  { path: 'modal-page', loadChildren: './modal-page/modal-page.module#ModalPagePageModule' },
+  { path: 'feed-adopcion', loadChildren: './feed-adopcion/feed-adopcion.module#FeedAdopcionPageModule' },
   { path: 'profile', loadChildren: './profile/profile.module#ProfilePageModule' },
 ];
 
