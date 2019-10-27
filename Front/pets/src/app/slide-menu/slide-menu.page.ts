@@ -17,11 +17,11 @@ export class SlideMenuPage implements OnInit {
 
   goToAdoptar(){
     this.navCtrl.pop();
-    this.navCtrl.navigateRoot('/feed-adopcion');
+    this.navCtrl.navigateRoot('/tabs/feed-adopcion');
   }
   goToMatch(){
     this.navCtrl.pop();
-    this.navCtrl.navigateRoot('/feed-match');
+    this.navCtrl.navigateRoot('/tabs/feed-match');
   }
   goToServices(){
     this.navCtrl.pop();
