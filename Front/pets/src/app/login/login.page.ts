@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ToastController } from '@ionic/angular';
+import { ToastController, MenuController } from '@ionic/angular';
 import { NavController } from '@ionic/angular';
 import { RestApiService } from '../rest-api.service';
 
@@ -15,7 +15,9 @@ export class LoginPage implements OnInit {
   constructor(
     public api: RestApiService,
     public navCtrl: NavController,
-    public toastController: ToastController) { }
+    public toastController: ToastController,public menuCtrl: MenuController ) {
+     this.menuCtrl.enable(false)
+     }
 
     
   ngOnInit() {
