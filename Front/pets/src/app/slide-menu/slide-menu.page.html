@@ -5,11 +5,15 @@
           <ion-col col-4></ion-col>
           <ion-col col-4>
             <ion-img width="80" height="80" src="assets/s-l300.png"></ion-img><br>
+            <ion-button (click)="goToAdoptar()">ir</ion-button>
             <h1>Encuentra a tu compañero incondicional</h1>
             <ol  >
                 <li type="circle">Adopción</li> <br>
-                <li type="circle">Parejas para mascotas</li><br>
+                <li type="circle">Parejas para mascotas</li>
+                <li type="circle"></li><br>
               </ol>
+
+            
           </ion-col>
           <ion-col col-4></ion-col>
         </ion-row>
@@ -18,16 +22,20 @@
       <ion-slide>
           <ion-row>
               <ion-col col-4></ion-col>
-              <ion-col col-4>
+              <ion-col col-4> 
                   <img src="assets/Tienda.png"/>
                   <h3>¿Buscas un servicio?</h3>
+                  <ion-button (click)="goToServices()">ir</ion-button>
                  
                   <ol>
                       <li type="circle">Veterinario</li> <br>
                       <li type="circle">Estetica</li><br>
                       <li type="circle">Comida</li><br>
-                      <li type="circle">Snacks</li><br>
+                      <li type="circle">Snacks</li>
+                      <li type="circle"></li><br>
                     </ol>
+
+                    
               </ion-col>
               <ion-col col-4></ion-col>
             </ion-row>
@@ -39,14 +47,16 @@
               <ion-col col-4>
                   <img src="assets/Corazon.png"/>
                   <h3>Comparte tu experiencia</h3>
+                  <ion-button (click)="goToMatch()">ir</ion-button>
                  
                   <ol>
                       <li type="circle">Cómo elegir una mascota</li> 
                       <li type="circle">Como entrenar a mi mascota</li>
                       <li type="circle">Cómo denunciar el maltrato animal</li>
                       <li type="circle">Lo que debes saber sobre la adopción</li>
-                      
+                      <li type="circle"></li>
                     </ol>
+                    
               </ion-col>
               <ion-col col-4></ion-col>
             </ion-row>

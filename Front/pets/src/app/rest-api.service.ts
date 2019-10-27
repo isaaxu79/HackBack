@@ -29,6 +29,15 @@ export class RestApiService {
       );
   }
 
+  getDataLocal(route): Observable<any> {
+    const url = `${apiUrlLocal}${route}`;
+    console.log(url)
+    return this.http.get(url)
+      .pipe(
+        catchError(this.handleError)
+      );
+  }
+
   private handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {
       // A client-side or network error occurred. Handle it accordingly.

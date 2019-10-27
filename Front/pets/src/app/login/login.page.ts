@@ -31,14 +31,15 @@ export class LoginPage implements OnInit {
   async indentifyUser(jsonData){
     await this.api.postDataLocal(jsonData, "auth/login")
     .subscribe(res => {
-      if(res.message){ // If the length is 3 it is an error.
+      if(res.message){
         console.log(res);
         this.presentToast(res.message);
       }else{
         console.log(res)
         window.localStorage.setItem("token",res.access_token.token)
         window.localStorage.setItem("idUser",res.user.id)
-        //this.navCtrl.navigateRoot('/', res);
+        this.navCtrl.pop();
+        this.navCtrl.navigateRoot('/slide-menu');
       }
     },(err) => {
       console.log(err);

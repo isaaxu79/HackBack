@@ -33,8 +33,8 @@ items: any;
   }
   datos = {
     "tipo":"adopcion",
-    "campo":"especie",
-    "valor":"pinguino"
+    "campo":1,
+    "valor":1
   }
 
   buttonColor = "FEDC1E";
@@ -58,11 +58,26 @@ items: any;
     toast.present();
   }
 
-  favoritos(item){
+  async favoritos(item){
+    let datos2={
+      "id_usuario":window.localStorage.getItem("idUser"),
+      "id_publicacion":item.id_publicacion
+    }
+
     if(item.star = "#FFFFFF"){
       item.star = "#FEDC1E"
+      await this.api.postDataLocal(datos2, "api/v1/favorito")
+    .subscribe(res => {
+        this.items=res.publicacion;
+        this.presentToast(res.message);
+    },(err) => {
+      console.log(err);
+      this.presentToast("Ocurrió un error interno");
+    });
     }else{
       item.star = "#FFFFFF";
+
+
     }
   }
 
