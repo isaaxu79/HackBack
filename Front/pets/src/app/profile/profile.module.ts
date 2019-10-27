@@ -2,16 +2,15 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
-import { ModalPagePage } from '../modal-page/modal-page.page';
 
 import { IonicModule } from '@ionic/angular';
 
-import { FeedAdopcionPage } from './feed-adopcion.page';
+import { ProfilePage } from './profile.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: FeedAdopcionPage
+    component: ProfilePage
   }
 ];
 
@@ -22,6 +21,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [FeedAdopcionPage,ModalPagePage]
+  declarations: [ProfilePage]
 })
-export class FeedAdopcionPageModule {}
+export class ProfilePageModule {}

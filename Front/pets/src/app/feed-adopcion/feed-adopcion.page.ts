@@ -18,7 +18,7 @@ export class FeedAdopcionPage implements OnInit {
 items: any;
   constructor(private api: RestApiService,public toastController: ToastController, private modalController:ModalController) { }
 
-  async chat(titulo) {
+  async chat() {
     const modal = await this.modalController.create({
       component: ModalPagePage
     });

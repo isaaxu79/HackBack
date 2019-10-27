@@ -9,6 +9,7 @@ class ServicioSchema extends Schema {
       table.increments()
       table.string('titulo').notNullable()            
       table.string('descripcion').notNullable()                                
+      table.string('imagen').notNullable()  
       table.string('telefono')
       table.integer('id_usuario').references('id').inTable('users').onDelete('cascade')      
       table.timestamps()
