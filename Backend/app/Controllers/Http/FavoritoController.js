@@ -11,7 +11,7 @@ class FavoritoController {
 
     async getByUser({ params, request, response, view }){
         let { id } = params
-        let favoritos = await Database.table('favoritos').innerJoin('publicacions','favoritos.publicacion_id','publicacions.id').where('usuario_id',id).innerJoin('mascotas','publicacions.mascota_id','mascota.id')
+        let favoritos = await Database.table('favoritos').innerJoin('publicacions','favoritos.publicacion_id','publicacions.id').where('usuario_id',id).innerJoin('mascotas','publicacions.mascota_id','mascotas.id')
 
         return response.status(201).json(favoritos)
     }
