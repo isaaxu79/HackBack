@@ -1,6 +1,6 @@
 <ion-header>
     <ion-toolbar>
-      <ion-title>feed-adopcion</ion-title>
+      <ion-title>feed-favoritos</ion-title>
     </ion-toolbar>
   </ion-header>
   
@@ -14,11 +14,11 @@
                       </ion-card-header>
   
                       <ion-card-content>                                          
-                          <ion-img [src]="item.imgPerfil"></ion-img>                                                  
+                          <ion-img [src]="item.imgPerfil"></ion-img>                                                
                           <ion-row>
                           <ion-item>
                             <ion-button (click)='favoritos(item)'>
-                              <ion-icon  [ngStyle]="{'color': #FEDC1E}" name="md-star"></ion-icon>      
+                              <ion-icon  [ngStyle]="{'color': '#FEDC1E'}" name="md-star"></ion-icon>      
                             </ion-button>                    
                           </ion-item>
                           <ion-item>
