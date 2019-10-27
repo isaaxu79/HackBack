@@ -29,8 +29,7 @@ export class FeedFavoritoPage implements OnInit {
   async getInfo(){
     await this.api.getDataLocal("api/v1/favorito/user/" + window.localStorage.getItem("idUser"))
     .subscribe(res => {
-        this.items=res.publicacion;
-        this.presentToast(res.message);
+        this.items=res
     },(err) => {
       console.log(err);
       this.presentToast("Ocurrió un error interno");

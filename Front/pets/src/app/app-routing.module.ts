@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: 'crear-adopcion', loadChildren: './crear-adopcion/crear-adopcion.module#CrearAdopcionPageModule' },
   { path: 'slide-menu', loadChildren: './slide-menu/slide-menu.module#SlideMenuPageModule' },
   { path: 'registro', loadChildren: './registro/registro.module#RegistroPageModule' },
+  { path: 'servicios-list', loadChildren: './servicios-list/servicios-list.module#ServiciosListPageModule'},
   { path: 'tabs', loadChildren: './pages/tabs/tabs.module#TabsPageModule' },
   // { path: 'tab1', loadChildren: './pages/tab1/tab1.module#Tab1PageModule' },
   // { path: 'tab2', loadChildren: './pages/tab2/tab2.module#Tab2PageModule' },
