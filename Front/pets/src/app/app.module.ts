@@ -16,6 +16,8 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 
+import { OpenNativeSettings } from '@ionic-native/open-native-settings/ngx';
+
 import { MediaCapture, CaptureVideoOptions ,MediaFile, CaptureError, CaptureImageOptions } from '@ionic-native/media-capture/ngx';
 import { Media, MediaObject } from '@ionic-native/media/ngx';
 import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer/ngx';
@@ -37,6 +39,7 @@ import { ImagePicker } from '@ionic-native/image-picker/ngx';
     SplashScreen,
     File,
     MediaCapture,
+    OpenNativeSettings,
     Media,
     FileTransfer,
 
