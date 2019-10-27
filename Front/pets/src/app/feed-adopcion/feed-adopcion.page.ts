@@ -20,7 +20,7 @@ items: any;
   constructor(private api: RestApiService,public toastController: ToastController, private modalController:ModalController,
     private popoverController: PopoverController) { }
 
-  async chat(titulo) {
+  async chat() {
     const modal = await this.modalController.create({
       component: ModalPagePage
     });
