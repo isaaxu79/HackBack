@@ -3,16 +3,13 @@
     <ion-grid>
         <ion-row>
             <ion-col>
-                <ion-card>
+                <ion-card *ngFor="let item of items">
                     <ion-card-header>
                         <ion-img src="https://i.pinimg.com/originals/36/35/51/363551657bca135492c535df672aef8a.jpg"></ion-img>
-                        <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-                        <ion-card-title>Card Title</ion-card-title>
+                        <ion-card-title>{{item.titulo}}</ion-card-title>
                     </ion-card-header>
-                    <h5><ion-icon name="calendar" > </ion-icon>Dias disponibles: </h5>
-                    <h5><ion-icon name="clock" ></ion-icon>Horario disponible: </h5>
-                    <h5><ion-icon name="phone-portrait" ></ion-icon>Telefono: </h5>
-                    <h5><ion-icon name="at" ></ion-icon>Correo: </h5>
+                    <h5><ion-icon name="phone-portrait" ></ion-icon>Telefono: {{item.telefono}} </h5>
+                    <ion-textarea placeholder="Descripcion">{{item.descripcion}}</ion-textarea>
                     </ion-card>
 
             </ion-col>                        

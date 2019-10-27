@@ -13,6 +13,7 @@ const routes: Routes = [
   { path: 'crear-adopcion', loadChildren: './crear-adopcion/crear-adopcion.module#CrearAdopcionPageModule' },
   { path: 'slide-menu', loadChildren: './slide-menu/slide-menu.module#SlideMenuPageModule' },
   { path: 'registro', loadChildren: './registro/registro.module#RegistroPageModule' },
+  { path: 'servicios-list', loadChildren: './servicios-list/servicios-list.module#ServiciosListPageModule'},
 
 
 ];
