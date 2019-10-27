@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController } from '@ionic/angular';
+import { NavController, MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-slide-menu',
@@ -8,7 +8,9 @@ import { NavController } from '@ionic/angular';
 })
 export class SlideMenuPage implements OnInit {
 
-  constructor(public navCtrl: NavController,) { }
+  constructor(public navCtrl: NavController, public menuCtrl: MenuController) { 
+    this.menuCtrl.enable(true)
+  }
 
   ngOnInit() {
   }
