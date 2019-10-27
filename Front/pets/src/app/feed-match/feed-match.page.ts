@@ -33,7 +33,6 @@ export class FeedMatchPage implements OnInit {
     await this.api.postDataLocal(this.datos, "api/v1/publicacion/filter")
     .subscribe(res => {
         this.items=res.publicacion;
-        this.presentToast(res.message);
     },(err) => {
       console.log(err);
       this.presentToast("Ocurrió un error interno");
