@@ -21,11 +21,11 @@ export class SlideMenuPage implements OnInit {
   }
   goToMatch(){
     this.navCtrl.pop();
-    this.navCtrl.navigateRoot('/tabs/feed-match');
+    this.navCtrl.navigateRoot('/tabs/home');
   }
   goToServices(){
     this.navCtrl.pop();
-    this.navCtrl.navigateRoot('/feed-favorito');
+    this.navCtrl.navigateRoot('/tabs/home');
   }
 
 }
