@@ -4,7 +4,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content *ngIf="ready==true">
 
     <ion-row>
         <ion-col padding></ion-col>
@@ -14,39 +14,39 @@
         <ion-col padding></ion-col>
         <ion-col size="12" align-self-center>
             <ion-item lines="none" style="background: transparent;">
-                <ion-label >Nombre: Eduardo Torres</ion-label>
+                <ion-label >Nombre: {{items.nombre}} {{items.apellido}}</ion-label>
             </ion-item>
           </ion-col>
         <ion-col size="12" align-self-center>
           <ion-item lines="none" style="background: transparent;">
-              <ion-label >Username: Edddduardo</ion-label>
+              <ion-label >Username: {{items.username}}</ion-label>
           </ion-item>
         </ion-col>
         <ion-col size="12" align-self-center>
           <ion-item lines="none" style="background: transparent;">
-              <ion-label>Correo: Edddduardo@hola.com</ion-label>
+              <ion-label>Correo: {{items.email}}</ion-label>
           </ion-item>
         </ion-col>
         <ion-col size="12" align-self-center>
             <ion-item lines="none" style="background: transparent;">
-                <ion-label>Cumpleaños: 10-10-10</ion-label>
+                <ion-label>Cumpleaños: {{items.fechaNacimiento}}</ion-label>
             </ion-item>
           </ion-col>
           <ion-col size="12" align-self-center>
               <ion-item lines="none" style="background: transparent;">
-                  <ion-label>Pais: México</ion-label>
+                  <ion-label>Pais: {{items.pais}}</ion-label>
               </ion-item>
             </ion-col>
             <ion-col size="12" align-self-center>
                 <ion-item lines="none" style="background: transparent;">
-                    <ion-label>Estado: Chiapas</ion-label>
+                    <ion-label>Estado: {{items.estado}}</ion-label>
                 </ion-item>
               </ion-col>
 
 
             <ion-col size="12" align-self-center>
                 <ion-item lines="none" style="background: transparent;">
-                    <ion-label>Municipio: Tuxtla Gutierrez</ion-label>
+                    <ion-label>Municipio: {{items.ciudad}}</ion-label>
                 </ion-item>
               </ion-col>
       </ion-row>
