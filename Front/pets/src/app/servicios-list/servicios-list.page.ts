@@ -12,12 +12,13 @@ export class ServiciosListPage implements OnInit {
   constructor(private api: RestApiService,public toastController: ToastController) { } 
 
   ngOnInit() {
+    this.getInfo()
   }
   async getInfo(){
-    await this.api.getDataLocal("api/v1/publicacion/filter")
+    await this.api.getDataLocal("api/v1/servicio")
     .subscribe(res => {
-        this.items=res.publicacion;
-        this.presentToast(res.message);
+        this.items=res;
+        console.log(res)
     },(err) => {
       console.log(err);
       this.presentToast("Ocurrió un error interno");
