@@ -12,6 +12,7 @@ const routes: Routes = [
   { path: 'feed-favorito', loadChildren: './feed-favorito/feed-favorito.module#FeedFavoritoPageModule' },
   { path: 'formulario-adopcion', loadChildren: './formulario-adopcion/formulario-adopcion.module#FormularioAdopcionPageModule' },
   { path: 'crear-adopcion', loadChildren: './crear-adopcion/crear-adopcion.module#CrearAdopcionPageModule' },  { path: 'servicios-list', loadChildren: './servicios-list/servicios-list.module#ServiciosListPageModule' },
+  { path: 'edit-adoption', loadChildren: './edit-adoption/edit-adoption.module#EditAdoptionPageModule' },
 
 
 

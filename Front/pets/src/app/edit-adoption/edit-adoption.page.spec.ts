@@ -1,22 +1,22 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FeedComponent } from './feed.component';
+import { EditAdoptionPage } from './edit-adoption.page';
 
-describe('FeedComponent', () => {
-  let component: FeedComponent;
-  let fixture: ComponentFixture<FeedComponent>;
+describe('EditAdoptionPage', () => {
+  let component: EditAdoptionPage;
+  let fixture: ComponentFixture<EditAdoptionPage>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FeedComponent ],
+      declarations: [ EditAdoptionPage ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FeedComponent);
+    fixture = TestBed.createComponent(EditAdoptionPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
